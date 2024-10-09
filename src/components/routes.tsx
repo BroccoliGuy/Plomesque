@@ -1,0 +1,18 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Quiz from './Quiz';
+import Results from './Results';
+
+const AppRoutes: React.FC = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/results" element={<Results />} />
+            </Routes>
+        </Router>
+    );
+};
+
+export default AppRoutes;
