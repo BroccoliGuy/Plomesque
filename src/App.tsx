@@ -90,10 +90,6 @@ const App: React.FC = () => {
           />
           <Route path="/results" element={<Results />} />
         </Routes>
-        <div>
-          <h1>Hello, World!</h1>
-          <p>This is my quiz application.</p>
-        </div>
       </div>
     </BrowserRouter>
   );
