@@ -66,7 +66,7 @@ const App: React.FC = () => {
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <Home
                 handleThemeChange={handleThemeChange}
