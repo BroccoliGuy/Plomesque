@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, Navigate  } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Results from './components/Results';
@@ -9,60 +9,30 @@ const App: React.FC = () => {
   const [selectedMode, setSelectedMode] = useState<string | null>(null);
   const [customQuestionCount, setCustomQuestionCount] = useState<number | undefined>(undefined);
   const [customTimerDuration, setCustomTimerDuration] = useState<number | undefined>(undefined);
-  const [customLives, setCustomLives] = useState<number | undefined>(undefined); // Ajoute l'état pour customLives
+  const [customLives, setCustomLives] = useState<number | undefined>(undefined);
 
-  console.log('App component is rendering'); // Ajoutez cette ligne
+  console.log('App component is rendering');
 
-  // Déterminer le nombre de questions en fonction du mode sélectionné
   const questionCount = selectedMode === '20-questions' ? 20 : 
-                        selectedMode === 'custom' ? Infinity :
-                        10;
+                        selectedMode === 'custom' ? Infinity : 10;
 
-  const handleThemeChange = (themes: string[]) => {
-    setSelectedThemes(themes);
-  };
+  const handleThemeChange = (themes: string[]) => setSelectedThemes(themes);
 
   const handleModeChange = (mode: string, customCount?: number, timerDuration?: number, lives?: number) => {
     setSelectedMode(mode);
-    
-    if (mode === 'custom' && customCount) {
-      setCustomQuestionCount(customCount);
-    } else {
-      setCustomQuestionCount(undefined);
-    }
-
-    if (mode === 'timer' || mode === 'custom') {
-      setCustomTimerDuration(timerDuration);
-    } else {
-      setCustomTimerDuration(undefined);
-    }
-
-    // Met à jour le nombre de vies si en mode survie ou personnalisé
-    if (mode === 'survival' || mode === 'custom') {
-      setCustomLives(lives); 
-    } else {
-      setCustomLives(undefined); 
-    }
+    setCustomQuestionCount(mode === 'custom' && customCount ? customCount : undefined);
+    setCustomTimerDuration((mode === 'timer' || mode === 'custom') ? timerDuration : undefined);
+    setCustomLives((mode === 'survival' || mode === 'custom') ? lives : undefined);
   };
 
-  const handleCustomQuestionCountChange = (count: number) => {
-    setCustomQuestionCount(count);
-  };
+  const handleCustomQuestionCountChange = (count: number) => setCustomQuestionCount(count);
+  const handleCustomTimerDurationChange = (duration: number) => setCustomTimerDuration(duration);
+  const handleCustomLivesChange = (lives: number) => setCustomLives(lives);
 
-  const handleCustomTimerDurationChange = (duration: number) => {
-    setCustomTimerDuration(duration);
-  };
-
-  const handleCustomLivesChange = (lives: number) => {
-    setCustomLives(lives); // Mettre à jour les vies personnalisées
-  };
-
-  const handleStartQuiz = () => {
-    console.log('Quiz démarré');
-  };
+  const handleStartQuiz = () => console.log('Quiz démarré');
 
   return (
-    <BrowserRouter basename="/Plomesque">
+    <HashRouter>
       <div className="App">
         <Routes>
           <Route
@@ -84,16 +54,16 @@ const App: React.FC = () => {
                 mode={selectedMode}
                 customQuestionCount={customQuestionCount} 
                 customTimerDuration={customTimerDuration} 
-                customLives={customLives} // Passer les vies personnalisées ici
+                customLives={customLives}
               />
             }
           />
           <Route path="/results" element={<Results />} />
-          <Route path="*" element={<Navigate to="/home" replace />} /> {/* Redirection par défaut */}
+          <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
-        <h2>Application en cours d'exécution</h2> {/* Ajout pour confirmer que l'application est toujours active */}
+        <h2>Application en cours d'exécution</h2>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
