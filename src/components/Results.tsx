@@ -16,7 +16,7 @@ const Results: React.FC = () => {
   return (
     <div className="results-container">
       <div className="score">Score: {score} / {questions.length}</div>
-      <button className="restart-button" onClick={() => window.location.href = '/'}>Recommencer</button>
+      <button className="restart-button" onClick={() => window.location.href = '/Plomesque/home'}>Recommencer</button>
       <h2>Résultats du Quiz</h2>
       <div className="answers-container">
         {questions && questions.map((question: Question, index: number) => (
