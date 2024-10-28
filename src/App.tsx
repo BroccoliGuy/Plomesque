@@ -9,6 +9,8 @@ const App: React.FC = () => {
   const [customTimerDuration, setCustomTimerDuration] = useState<number | undefined>(undefined);
   const [customLives, setCustomLives] = useState<number | undefined>(undefined); // Ajoute l'état pour customLives
 
+  console.log('App component is rendering'); // Ajoutez cette ligne
+
   // Déterminer le nombre de questions en fonction du mode sélectionné
   const questionCount = selectedMode === '20-questions' ? 20 : 
                         selectedMode === 'custom' ? Infinity :
@@ -74,6 +76,10 @@ const App: React.FC = () => {
           handleCustomTimerDurationChange={handleCustomTimerDurationChange}
           handleCustomLivesChange={handleCustomLivesChange} // Passer la fonction pour les vies ici
         />
+            <div>
+      <h1>Hello, World!</h1>
+      <p>This is my quiz application.</p>
+    </div>
       </div>
     </BrowserRouter>
   );
