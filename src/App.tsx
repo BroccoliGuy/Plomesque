@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate  } from 'react-router-dom';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Results from './components/Results';
@@ -66,7 +66,7 @@ const App: React.FC = () => {
       <div className="App">
         <Routes>
           <Route
-            path="/"
+            path="/home"
             element={
               <Home
                 handleThemeChange={handleThemeChange}
@@ -89,6 +89,7 @@ const App: React.FC = () => {
             }
           />
           <Route path="/results" element={<Results />} />
+          <Route path="*" element={<Navigate to="/home" replace />} /> {/* Redirection par défaut */}
         </Routes>
         <h2>Application en cours d'exécution</h2> {/* Ajout pour confirmer que l'application est toujours active */}
       </div>
