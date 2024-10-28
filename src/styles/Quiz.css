@@ -1,0 +1,162 @@
+/* Conteneur pour le body pour empêcher le défilement */
+body {
+    overflow: hidden; /* Empêche le défilement sur toute la page */
+}
+
+/* Conteneur principal du quiz */
+.quiz-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d2d2d, #444444);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden; /* Empêche le défilement */
+}
+
+/* Animation de fond */
+.quiz-container::before {
+    content: "";
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10%);
+    background-size: 10% 10%;
+    opacity: 0.3;
+    animation: animateBg 60s linear infinite;
+}
+
+@keyframes animateBg {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(25%, 25%); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Conteneur pour le titre, timer, et vies en en-tête fixe */
+.quiz-header {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour chaque élément */
+    align-items: center;
+    justify-items: center;
+    color: white;
+    z-index: 10;
+    box-sizing: border-box; /* Assure un bon calcul des marges et tailles */
+}
+
+/* Ajoutez un padding-top au conteneur principal pour éviter de recouvrir le contenu */
+.quiz-container {
+    padding-top: 70px; /* Espace sous l'en-tête fixe */
+}
+
+/* Styles pour le timer */
+.timer {
+    color: #ff5722;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+/* Icône pour les vies */
+.heart-icon {
+    color: red;
+    font-size: 1.5rem;
+    margin: 0 2px;
+}
+
+/* Style pour le nom du thème */
+.theme-name {
+    font-size: 1.5rem;
+    color: #ffffff80;
+    text-align: center;
+    margin: 0; /* Supprime la marge pour rapprocher les éléments */
+}
+
+/* Image de la question */
+.quiz-container img {
+    width: 50%;
+    max-width: 25%;
+    max-height: 35%;
+    height: auto;
+    object-fit: contain;
+    margin: 5%; /* Espace autour de l'image pour éviter tout chevauchement */
+    z-index: 1;
+}
+
+/* Conteneur pour les options de réponse */
+.options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    max-width: 25%;
+    position: absolute;
+    bottom: 35%;
+    z-index: 1;
+}
+
+/* Styles pour les boutons de réponse */
+.options-container button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.options-container button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.home-icon {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    cursor: pointer;
+    font-size: 1.5em;
+    border: 1px solid #241e2b;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #241e2b;
+  }
+
+  .home-icon:hover {
+    transform: scale(1.05); 
+}
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(68, 66, 66, 0.75);
+    border: 2px solid #241e2b;
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+  }
+  
+  .popup button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #666;
+    border-radius: 5px;
+    color: white;
+    width: 35%; /* Prend toute la largeur de la grille */
+    height: 50px; /* Hauteur fixe pour uniformiser les tailles */
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 5%;
+  }
+  
