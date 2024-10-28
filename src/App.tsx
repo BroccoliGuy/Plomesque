@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import AppRoutes from './components/AppRoutes';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Quiz from './components/Quiz';
+import Results from './components/Results';
 
 const App: React.FC = () => {
   const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
@@ -62,24 +64,36 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="App">
-        <AppRoutes
-          selectedThemes={selectedThemes}
-          questionCount={questionCount}
-          customQuestionCount={customQuestionCount}
-          customTimerDuration={customTimerDuration}
-          customLives={customLives} // Passer customLives ici
-          selectedMode={selectedMode}
-          handleThemeChange={handleThemeChange}
-          handleModeChange={handleModeChange}
-          handleStartQuiz={handleStartQuiz}
-          handleCustomQuestionCountChange={handleCustomQuestionCountChange}
-          handleCustomTimerDurationChange={handleCustomTimerDurationChange}
-          handleCustomLivesChange={handleCustomLivesChange} // Passer la fonction pour les vies ici
-        />
-            <div>
-      <h1>Hello, World!</h1>
-      <p>This is my quiz application.</p>
-    </div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                handleThemeChange={handleThemeChange}
+                handleModeChange={handleModeChange}
+                handleStartQuiz={handleStartQuiz}
+              />
+            }
+          />
+          <Route
+            path="/quiz"
+            element={
+              <Quiz
+                selectedThemes={selectedThemes}
+                questionCount={questionCount}
+                mode={selectedMode}
+                customQuestionCount={customQuestionCount} 
+                customTimerDuration={customTimerDuration} 
+                customLives={customLives} // Passer les vies personnalisées ici
+              />
+            }
+          />
+          <Route path="/results" element={<Results />} />
+        </Routes>
+        <div>
+          <h1>Hello, World!</h1>
+          <p>This is my quiz application.</p>
+        </div>
       </div>
     </BrowserRouter>
   );
