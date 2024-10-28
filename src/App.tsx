@@ -66,7 +66,7 @@ const App: React.FC = () => {
       <div className="App">
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={
               <Home
                 handleThemeChange={handleThemeChange}
@@ -90,6 +90,7 @@ const App: React.FC = () => {
           />
           <Route path="/results" element={<Results />} />
         </Routes>
+        <h2>Application en cours d'exécution</h2> {/* Ajout pour confirmer que l'application est toujours active */}
       </div>
     </BrowserRouter>
   );
