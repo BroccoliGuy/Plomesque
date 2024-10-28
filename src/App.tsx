@@ -62,11 +62,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Plomesque">
       <div className="App">
         <Routes>
           <Route
-            path="/Plomesque/home"
+            path="/home"
             element={
               <Home
                 handleThemeChange={handleThemeChange}
@@ -76,7 +76,7 @@ const App: React.FC = () => {
             }
           />
           <Route
-            path="/Plomesque/quiz"
+            path="/quiz"
             element={
               <Quiz
                 selectedThemes={selectedThemes}
@@ -88,8 +88,8 @@ const App: React.FC = () => {
               />
             }
           />
-          <Route path="/Plomesque/results" element={<Results />} />
-          <Route path="*" element={<Navigate to="/Plomesque/home" replace />} /> {/* Redirection par défaut */}
+          <Route path="/results" element={<Results />} />
+          <Route path="*" element={<Navigate to="/home" replace />} /> {/* Redirection par défaut */}
         </Routes>
         <h2>Application en cours d'exécution</h2> {/* Ajout pour confirmer que l'application est toujours active */}
       </div>
