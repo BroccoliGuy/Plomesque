@@ -63,18 +63,6 @@ const App: React.FC = () => {
     <BrowserRouter>
       <div className="App">
         <AppRoutes
-          selectedThemes={selectedThemes}
-          questionCount={questionCount}
-          customQuestionCount={customQuestionCount}
-          customTimerDuration={customTimerDuration}
-          customLives={customLives} // Passer customLives ici
-          selectedMode={selectedMode}
-          handleThemeChange={handleThemeChange}
-          handleModeChange={handleModeChange}
-          handleStartQuiz={handleStartQuiz}
-          handleCustomQuestionCountChange={handleCustomQuestionCountChange}
-          handleCustomTimerDurationChange={handleCustomTimerDurationChange}
-          handleCustomLivesChange={handleCustomLivesChange} // Passer la fonction pour les vies ici
         />
             <div>
       <h1>Hello, World!</h1>
