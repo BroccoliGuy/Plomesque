@@ -28,7 +28,9 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "deploy:all": "npm run build && npm run deploy"
+    "deploy:all": "npm run build && npm run deploy",
+    "fastpush" : "git add . && git commit -m 'push' && git push && npm run build && npm run deploy"
+
   },
   "eslintConfig": {
     "extends": [

@@ -25,10 +25,6 @@ const App: React.FC = () => {
     setCustomLives((mode === 'survival' || mode === 'custom') ? lives : undefined);
   };
 
-  const handleCustomQuestionCountChange = (count: number) => setCustomQuestionCount(count);
-  const handleCustomTimerDurationChange = (duration: number) => setCustomTimerDuration(duration);
-  const handleCustomLivesChange = (lives: number) => setCustomLives(lives);
-
   const handleStartQuiz = () => console.log('Quiz démarré');
 
   return (
@@ -61,7 +57,6 @@ const App: React.FC = () => {
           <Route path="/results" element={<Results />} />
           <Route path="*" element={<Navigate to="/home" replace />} />
         </Routes>
-        <h2>Application en cours d'exécution</h2>
       </div>
     </HashRouter>
   );

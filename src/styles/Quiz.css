@@ -15,6 +15,7 @@ body {
     color: white;
     font-family: 'Arial', sans-serif;
     overflow: hidden; /* Empêche le défilement */
+    padding-top: 70px; /* Espace sous l'en-tête fixe */
 }
 
 /* Animation de fond */
@@ -41,20 +42,14 @@ body {
 .quiz-header {
     position: absolute;
     top: 5%;
-    left: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour chaque élément */
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
     color: white;
     z-index: 10;
-    box-sizing: border-box; /* Assure un bon calcul des marges et tailles */
-}
-
-/* Ajoutez un padding-top au conteneur principal pour éviter de recouvrir le contenu */
-.quiz-container {
-    padding-top: 70px; /* Espace sous l'en-tête fixe */
+    box-sizing: border-box;
 }
 
 /* Styles pour le timer */
@@ -62,12 +57,11 @@ body {
     color: #ff5722;
     font-weight: bold;
     font-size: 1.5rem;
-
 }
 
 /* Icône pour les vies */
 .heart-icon {
-    color: red;
+    color: #ff5722;
     font-size: 1.5rem;
     margin: 0 2px;
 }
@@ -77,17 +71,17 @@ body {
     font-size: 1.5rem;
     color: #ffffff80;
     text-align: center;
-    margin: 0; /* Supprime la marge pour rapprocher les éléments */
+    margin: 0;
 }
 
 /* Image de la question */
 .quiz-container img {
-    width: 50%;
-    max-width: 25%;
+    width: 100%;
+    max-width: 475px;
     max-height: 35%;
     height: auto;
     object-fit: contain;
-    margin: 5%; /* Espace autour de l'image pour éviter tout chevauchement */
+    margin: 5%;
     z-index: 1;
 }
 
@@ -96,8 +90,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    width: 100%;
-    max-width: 25%;
+    width: 90%;
+    max-width: 475px;
     position: absolute;
     bottom: 35%;
     z-index: 1;
@@ -113,12 +107,21 @@ body {
     cursor: pointer;
     transition: background 0.3s;
     width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.2;
+    white-space: normal; /* Permet au texte de se répartir sur plusieurs lignes */
+    overflow: hidden;
 }
 
 .options-container button:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
+/* Icône de retour à la page d'accueil */
 .home-icon {
     position: absolute;
     top: 5%;
@@ -130,13 +133,14 @@ body {
     border-radius: 5px;
     background-color: transparent;
     color: #241e2b;
-  }
+}
 
-  .home-icon:hover {
+.home-icon:hover {
     transform: scale(1.05); 
 }
-  
-  .popup {
+
+/* Popup pour le message d'alerte */
+.popup {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -146,17 +150,38 @@ body {
     padding: 20px;
     z-index: 1000;
     text-align: center;
-  }
-  
-  .popup button {
+}
+
+/* Bouton de la popup */
+.popup button {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #666;
     border-radius: 5px;
     color: white;
-    width: 35%; /* Prend toute la largeur de la grille */
-    height: 50px; /* Hauteur fixe pour uniformiser les tailles */
+    width: 35%;
+    height: 50px;
     cursor: pointer;
     transition: background 0.3s;
     margin: 5%;
-  }
-  
+}
+
+/* Media Queries pour assurer la responsivité */
+@media (max-width: 768px) {
+    .quiz-container img {
+        padding-top: 150px;
+    }
+
+    .options-container {
+        bottom: 17.5%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .quiz-container img {
+        padding-top: 100px;
+    }
+
+    .options-container {
+        bottom: 25%;
+    }
+}
