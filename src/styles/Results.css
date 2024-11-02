@@ -149,3 +149,39 @@ body {
     background: rgba(255, 165, 0, 0.5); /* Orange pour la bonne réponse non sélectionnée */
     border: 1px solid rgba(255, 165, 0, 0.5); /* Bordure orange pour différencier */
 }
+
+@media (max-width: 1200px) {
+    .answers-container {
+        grid-template-columns: 1fr 1fr; /* Deux colonnes */
+    }
+}
+
+@media (max-width: 1024px) {
+
+}
+
+/* Écrans petits */
+@media (max-width: 768px) {
+    .answers-container {
+        padding: 10px;
+        grid-template-columns: 1fr; /* Deux colonnes */
+    }
+
+    .question-container {
+        display: flex;
+        flex-direction: row; /* Met l'image au-dessus de la grille */
+        align-items: center; /* Centre l'image et la grille */
+        margin-bottom: 5px; /* Ajoute un espace en bas pour chaque question */
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .results-container h2{
+        margin-top: 15%;
+    }
+
+    .answers-container {
+        margin-top: 0%;
+    }
+}
