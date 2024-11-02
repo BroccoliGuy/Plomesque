@@ -78,15 +78,16 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 
 Le projet est structuré comme suit :
 
-Plomesque/ 
-    ├── public/ # Fichiers statiques 
-    ├── src/ │ 
-        ├── assets/ # Drapeaux et images de thèmes │ 
-        ├── components/ # Composants React (Header, Quiz, etc.) │ 
-        ├── themes/ # Dossiers de thèmes (ex. flags.ts, fruits.ts) │ 
-        └── styles/ # Fichiers CSS et animations 
-    ├── App.tsx # Composant principal │ 
-    ├── index.tsx # Point d'entrée de l'application │ 
-    ├── .gitignore 
-    ├── package.json # Dépendances et scripts npm 
-    └── README.md # Documentation du projet
+Plomesque/
+├── public/                 # Fichiers statiques
+├── src/
+│   ├── components/         # Composants React (Header, Quiz, Results)
+│   ├── styles/             # Fichiers CSS et animations (Header, Quiz, Results)
+│   ├──  themes/            # Dossiers de thèmes (ex. index.ts,flags.ts, capitals.ts)
+│   │   ├── assets/         # images de thèmes
+│   │   └── covers/         # images de thèmes afficher dans Home
+├── App.tsx                 # Composant principal
+├── index.tsx               # Point d'entrée de l'application
+├── .gitignore
+├── package.json            # Dépendances et scripts npm
+└── README.md               # Documentation du projet
