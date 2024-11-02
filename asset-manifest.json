@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Plomesque/static/css/main.46cf7a41.css",
+    "main.css": "/Plomesque/static/css/main.4fede69c.css",
     "main.js": "/Plomesque/static/js/main.a914ad37.js",
     "static/js/453.cc650920.chunk.js": "/Plomesque/static/js/453.cc650920.chunk.js",
     "static/media/Orange.png": "/Plomesque/static/media/Orange.832148179824ae434544.png",
@@ -154,12 +154,12 @@
     "static/media/Barbade.png": "/Plomesque/static/media/Barbade.85f4eab35f594aa9c080.png",
     "static/media/Soudan du Sud.png": "/Plomesque/static/media/Soudan du Sud.241898c7416933eee414.png",
     "index.html": "/Plomesque/index.html",
-    "main.46cf7a41.css.map": "/Plomesque/static/css/main.46cf7a41.css.map",
+    "main.4fede69c.css.map": "/Plomesque/static/css/main.4fede69c.css.map",
     "main.a914ad37.js.map": "/Plomesque/static/js/main.a914ad37.js.map",
     "453.cc650920.chunk.js.map": "/Plomesque/static/js/453.cc650920.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.46cf7a41.css",
+    "static/css/main.4fede69c.css",
     "static/js/main.a914ad37.js"
   ]
 }
