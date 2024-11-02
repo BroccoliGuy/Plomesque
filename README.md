@@ -83,11 +83,11 @@ Plomesque/
 ├── src/
 │   ├── components/         # Composants React (Header, Quiz, Results)
 │   ├── styles/             # Fichiers CSS et animations (Header, Quiz, Results)
-│   ├──  themes/            # Dossiers de thèmes (ex. index.ts,flags.ts, capitals.ts)
+│   ├── themes/            # Dossiers de thèmes (ex. index.ts,flags.ts, capitals.ts)
 │   │   ├── assets/         # images de thèmes
 │   │   └── covers/         # images de thèmes afficher dans Home
-├── App.tsx                 # Composant principal
-├── index.tsx               # Point d'entrée de l'application
+│   ├── App.tsx                 # Composant principal
+│   ├── index.tsx               # Point d'entrée de l'application
 ├── .gitignore
 ├── package.json            # Dépendances et scripts npm
 └── README.md               # Documentation du projet
