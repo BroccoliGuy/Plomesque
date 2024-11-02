@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# Plomesque
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenue sur **Plomesque**, une application de quiz interactive où vous pouvez tester vos connaissances sur divers thèmes, notamment les drapeaux du monde et bien plus encore. Sélectionnez un thème, choisissez un mode de jeu et démarrez le quiz pour tester vos connaissances de manière ludique et stimulante !
 
-## Available Scripts
+## Table des matières
 
-In the project directory, you can run:
+- [Aperçu du projet](#aperçu-du-projet)
+- [Fonctionnalités](#fonctionnalités)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Structure du projet](#structure-du-projet)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Aperçu du projet
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Plomesque est un quiz interactif développé avec **React** et **TypeScript**. Il est hébergé sur [GitHub Pages](https://broccoliguy.github.io/Plomesque/home) et peut être accédé directement via ce lien.
 
-### `npm test`
+L'application propose plusieurs thèmes et modes de jeu personnalisés, permettant aux utilisateurs de tester leurs connaissances de manière flexible et divertissante. Ce projet est structuré de manière à être facilement extensible, permettant l'ajout de nouveaux thèmes et de fonctionnalités sans grande complexité.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Fonctionnalités
 
-### `npm run build`
+- **Sélection de thèmes** : Choisissez parmi plusieurs thèmes, y compris les drapeaux, les fruits, etc.
+- **Modes de jeu personnalisables** : 
+  - Mode 10 questions
+  - Mode 20 questions
+  - Mode 60 secondes
+  - Mode Survie
+  - Mode personnalisé avec configuration avancée
+- **Interface intuitive et responsive** : Une interface utilisateur moderne, responsive, qui s'adapte à toutes les tailles d'écran.
+- **Statistiques de fin de jeu** : Résultats et répartition des réponses par thème sélectionné.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prérequis
 
-### `npm run eject`
+- Node.js et npm (Node Package Manager)
+- Un accès à [GitHub](https://github.com/) pour cloner le dépôt
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Étapes d'installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clonez le dépôt** :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    ```bash
+    git clone https://github.com/BroccoliGuy/Plomesque.git
+    cd Plomesque
+    ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Installez les dépendances** :
 
-## Learn More
+    ```bash
+    npm install
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Lancez l'application** :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    npm start
+    ```
+
+4. Accédez à l'application dans votre navigateur à l'adresse suivante :
+
+    ```
+    http://localhost:3000
+    ```
+
+## Utilisation
+
+1. Accédez à la page d'accueil de **Plomesque**.
+2. Choisissez un ou plusieurs thèmes.
+3. Sélectionnez votre mode de jeu préféré (10 questions, 20 questions, etc.).
+4. Cliquez sur "Démarrer le quiz" et amusez-vous à répondre aux questions.
+5. À la fin du quiz, consultez vos résultats et statistiques par thème.
+
+## Structure du projet
+
+Le projet est structuré comme suit :
+
+Plomesque/ 
+    ├── public/ # Fichiers statiques 
+    ├── src/ │ 
+        ├── assets/ # Drapeaux et images de thèmes │ 
+        ├── components/ # Composants React (Header, Quiz, etc.) │ 
+        ├── themes/ # Dossiers de thèmes (ex. flags.ts, fruits.ts) │ 
+        └── styles/ # Fichiers CSS et animations 
+    ├── App.tsx # Composant principal │ 
+    ├── index.tsx # Point d'entrée de l'application │ 
+    ├── .gitignore 
+    ├── package.json # Dépendances et scripts npm 
+    └── README.md # Documentation du projet
