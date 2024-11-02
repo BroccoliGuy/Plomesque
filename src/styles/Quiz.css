@@ -123,7 +123,7 @@ body {
 
 /* Icône de retour à la page d'accueil */
 .home-icon {
-    position: absolute;
+    position: fixed;
     top: 5%;
     right: 1%;
     cursor: pointer;
@@ -167,12 +167,23 @@ body {
 
 /* Media Queries pour assurer la responsivité */
 @media (max-width: 768px) {
+    .quiz-header {
+        top: 10%; /* Réduction du top pour tout le header */
+    }
     .quiz-container img {
         padding-top: 150px;
     }
 
     .options-container {
         bottom: 17.5%;
+    }
+
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        padding: 10px;
+        width: 75%;
     }
 }
 

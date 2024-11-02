@@ -143,7 +143,7 @@
     position: absolute;
     top: 1%;
     right: 0.5%;
-    padding: 15px 20px;
+    padding: 10px 15px;
     background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
     color: white;
     border: none;
@@ -238,39 +238,85 @@ input[type="number"] {
     font-size: 1rem; /* Taille de police légèrement plus grande */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .mode-column {
-        width: 30%; /* Ajustement de la largeur pour les écrans plus petits */
-        border-right: none; /* Suppression de la bordure */
-        border-bottom: 2px solid #666; /* Bordure en bas */
-    }
-
+@media (max-width: 1500px) {
     .theme-column {
-        width: 100%; /* Occupation complète de l'espace */
-        margin-left: 0; /* Suppression de la marge à gauche */
+        grid-template-columns: repeat(4, 1fr); /* 5 cartes par ligne */
     }
 
-    .theme-card {
-        width: calc(50% - 10px); /* 2 cartes par ligne sur mobile */
-        margin-top: 10%;
-    }
-
-    .start-button {
-        bottom: 5%; /* Éloigner le bouton du bas */
-        right: 5%; /* Éloigner le bouton de la droite */
-        padding: 10px 15px; /* Ajustement du padding */
-        font-size: medium; /* Taille de police légèrement réduite */
+    .theme-card h3 {
+        height: 35px; /* Hauteur fixe pour garantir que tous les titres occupent le même espace */
     }
 }
 
-@media (max-width: 480px) {
-    .mode-column {
-        width: 100%; /* Occupation complète de l'espace */
-        border-bottom: none; /* Suppression de la bordure en bas */
+@media (max-width: 1024px) {
+    .mode-column h2 {
+        font-size: 1rem; /* Utilisation de rem pour la taille */
     }
 
-    .theme-card {
-        width: 100%; /* 1 carte par ligne sur mobile */
+    .choose {
+        font-size: 1rem; /* Utilisation de rem pour la taille */
+        margin-top: -30px;
+    }
+
+    .theme-card h3 {
+        font-size: 0.75rem; /* Réduit la taille du texte */
+        height: 25px; /* Hauteur fixe pour garantir que tous les titres occupent le même espace */
+    }
+
+    .start-button {
+        top: 0.5%;
+        right: 0.5%;
+        padding: 7.5px 15px;
+        font-size: small;
+    }
+}
+
+/* Écrans petits */
+@media (max-width: 768px) {
+    .mode-column {
+        width: 15%; /* Largeur fixe pour la colonne de gauche */
+        padding: 10px;
+    }
+
+    .mode-column h2 {
+        margin-bottom: 15px;
+        font-size: 0.75rem; /* Utilisation de rem pour la taille */
+    }
+
+    .mode-column label {
+        padding: 2.5%;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        margin-bottom: 10px;
+        display: f; /* Prendre toute la largeur */
+        text-align: center;
+        transition: background 0.3s;
+    }
+
+    .choose {
+        font-size: 0.75rem; /* Utilisation de rem pour la taille */
+        margin-top: -25px;
+    }
+
+    .theme-column {
+        grid-template-columns: repeat(2, 1fr); /* 5 cartes par ligne */
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .mode-column {
+        width: 25%; /* Largeur fixe pour la colonne de gauche */
+        padding: 5px;
+    }
+
+    .choose {
+        margin-top: -25px;
+    }
+    
+    /* Styles des cartes de thèmes */
+    .theme-column {
+        padding: 2.5px; /* Réduit le padding global pour l'espacement */
+        margin-top: 7.5%;
     }
 }
