@@ -14,7 +14,7 @@ Bienvenue sur **Plomesque**, une application de quiz interactive où vous pouvez
 
 ## Aperçu du projet
 
-Plomesque est un quiz interactif développé avec **React** et **TypeScript**. Il est hébergé sur [GitHub Pages](https://broccoliguy.github.io/Plomesque/home) et peut être accédé directement via ce lien.
+Plomesque est un quiz interactif développé avec **React** et **TypeScript**. Il est hébergé sur [GitHub Pages](https://broccoliguy.github.io/Plomesque/) et peut être accédé directement via ce lien.
 
 L'application propose plusieurs thèmes et modes de jeu personnalisés, permettant aux utilisateurs de tester leurs connaissances de manière flexible et divertissante. Ce projet est structuré de manière à être facilement extensible, permettant l'ajout de nouveaux thèmes et de fonctionnalités sans grande complexité.
 
@@ -79,15 +79,16 @@ Pour exécuter ce projet en local, suivez les étapes ci-dessous :
 Le projet est structuré comme suit :
 
 Plomesque/
-├── public/                       # Fichiers statiques
-├── src/
-│   ├── components/               # Composants React (Header, Quiz, Results)
-│   ├── styles/                   # Fichiers CSS et animations (Header, Quiz, Results)
-│   ├── themes/                   # Dossiers de thèmes (ex. index.ts, flags.ts, capitals.ts)
-│   │   ├── assets/               # Images de thèmes
-│   │   └── covers/               # Images de couverture affichées dans Home
-│   ├── App.tsx                   # Composant principal
-│   └── index.tsx                 # Point d'entrée de l'application
-├── .gitignore
-├── package.json                  # Dépendances et scripts npm
-└── README.md                     # Documentation du projet
+- public/                           # Fichiers statiques
+- src/
+  - components/                     # Composants React (Header, Quiz, Results)
+  - styles/                         # Fichiers CSS et animations (Header, Quiz, Results)
+  - themes/                         # Dossiers de thèmes (ex. index.ts, flags.ts, capitals.ts)
+    - assets/                       # Images de thèmes
+    - covers/                       # Images de thèmes affichées dans Home
+  - App.tsx                         # Composant principal
+  - index.tsx                       # Point d'entrée de l'application
+- .gitignore
+- package.json                      # Dépendances et scripts npm
+- README.md                         # Documentation du projet
+
