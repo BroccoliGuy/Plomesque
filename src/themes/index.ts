@@ -1,27 +1,35 @@
-import fruits from './fruits';
 import flags from './flags';
 import baguette from './baguette';
 import capitals from './capitals';
 import states from './states';
+import gradesAAE  from './gradesAAE';
+import gradesAT  from './gradesAT';
+import gradesAM  from './gradesAM';
+import gradesAG  from './gradesAG';
+import alphabet  from './alphabet';
 
 // Importation des images de couverture
 import flagsCover from './covers/flags.jpg';
-import fruitsCover from './covers/fruits.jpg';
 import baguetteCover from './covers/baguette.jpg';
 import capitalsCover from './covers/capitals.jpg';
 import statesCover from './covers/states.jpg';
+import gradesATCover from './covers/AT.jpg';
+import gradesAMCover from './covers/AM.jpg';
+import gradesAAECover from './covers/AAE.jpg';
+import gradesAGCover from './covers/AG.jpg';
+import alphabetCover from './covers/Alphabet.png';
+
 
 const allThemes: { [key: string]: { [key: string]: string, cover: string } } = { 
   'Drapeaux du monde': { ...flags, cover: flagsCover },
   'Capitales du monde': { ...capitals, cover: capitalsCover },
   'drapeaux des États et territoires des États-Unis': { ...states, cover: statesCover },
-  'Fruits': { ...fruits, cover: fruitsCover }, 
-  'Baguette2': { ...baguette, cover: baguetteCover },
+  'alphabet': { ...alphabet, cover: alphabetCover },
   'Baguette3': { ...baguette, cover: baguetteCover },
-  'Baguette4': { ...baguette, cover: baguetteCover },
-  'Baguette5': { ...baguette, cover: baguetteCover },
-  'Baguette6': { ...baguette, cover: baguetteCover },
-  'Baguette7': { ...baguette, cover: baguetteCover },
+  'Grades de l\'Armée de terre française': { ...gradesAT, cover: gradesATCover },
+  'Grades de la Marine nationale française': { ...gradesAM, cover: gradesAMCover },
+  'Grades de l\'Armée de l\'air et de l\'espace française': { ...gradesAAE, cover: gradesAAECover },
+  'Grades de la Gendarmerie nationale française': { ...gradesAG, cover: gradesAGCover },
   'Baguette8': { ...baguette, cover: baguetteCover },
   'Baguette9': { ...baguette, cover: baguetteCover },
   'Baguette10': { ...baguette, cover: baguetteCover },
